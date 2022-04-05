@@ -1,0 +1,23 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+editor.formatOnSave = true
+
+# ESLint settings
+eslint.alwaysShowStatus = true
+eslint.autoFixOnSave = true
+eslint.provideLintTask = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.ts]
+editor.formatOnSave = true

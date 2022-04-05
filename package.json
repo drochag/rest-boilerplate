@@ -1,0 +1,38 @@
+{
+  "name": "rest-boilerplate",
+  "version": "1.0.0",
+  "description": "REST NodeJS boilerplate",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "lint": "eslint .eslint.json . --ext .ts,.js",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": "Daniel Rocha <hi@danielrocha.xyz> (http://danielrocha.xyz/)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.6.3"
+  }
+}
