@@ -9,15 +9,20 @@
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "lint": "eslint .eslint.json . --ext .ts,.js",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "seed": "npx tsc prisma/seed.ts && node prisma/seed.js && rm prisma/seed.js"
   },
   "author": "Daniel Rocha <hi@danielrocha.xyz> (http://danielrocha.xyz/)",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^3.12.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -33,6 +38,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   }
 }
